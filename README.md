@@ -23,6 +23,12 @@ Initialize the cli scaffolding
 cobra init --pkg-name pokedex-cli-demo
 ```
 
+Install CLI tool
+
+```Bash
+go install pokedex-cli-demo 
+```
+
 ## References
 
 [PokeAPI](https://github.com/PokeAPI/pokeapi/) - A RESTful API for Pokémon
