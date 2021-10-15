@@ -267,7 +267,6 @@ type Response struct {
 
 func getPokemon(userInputText string) Response {
 
-	// AE Model
 	endpoint := fmt.Sprintf("https://pokeapi.co/api/v2/pokemon/%s", userInputText)
 	resp, err := http.Get(endpoint)
 
@@ -289,7 +288,6 @@ func getPokemon(userInputText string) Response {
 	return result
 }
 
-// getCmd represents the get command
 var getCmd = &cobra.Command{
 	Use:   "get",
 	Short: "Get related information from PokeAPI Call",
