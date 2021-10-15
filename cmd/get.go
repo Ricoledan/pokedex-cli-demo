@@ -281,6 +281,8 @@ func getPokemon(userInputText string) Response {
 	}
 
 	var result Response
+
+	// convert json(Byte data) into Struct
 	if err := json.Unmarshal(body, &result); err != nil {
 		fmt.Println("Can not unmarshal JSON")
 	}
@@ -290,7 +292,7 @@ func getPokemon(userInputText string) Response {
 
 var getCmd = &cobra.Command{
 	Use:   "get",
-	Short: "Get related information from PokeAPI Call",
+	Short: "Get related information from PokeAPI Call by using a pokemon name as the argument",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 
